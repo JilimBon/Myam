@@ -18,15 +18,25 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-
+.ed{
+    font-weight: 700;
+    font-size: 1.5em;
+    padding-left: 10em;
+}
 .start {
     z-index: 2;
+    background-color: black;
+    border-radius: 10px;
+    padding:0.6em 0.7em;
 }
-
+.start:hover {
+    box-shadow: 0 0 20px #a0a0a0;
+    transition-duration: 0.5s;
+}
 .nav-item {
     color: black;
     text-decoration: none;
-    margin-right: 25px;
+    margin-right: 0.5em;
     font-size: 1.5em;
 }
 
@@ -234,6 +244,13 @@ wh-content p {
     border: 1px solid rgba(8, 8, 42, 0.15);
 
 }
+.button{
+    border-radius: 15px;
+}
+.button:hover {
+    box-shadow: 0 0 20px #000;
+    transition-duration: 0.5s;
+}
 
 .sour {
     color: #75EDA6;
@@ -269,6 +286,7 @@ wh-content p {
 .slider-container {
     overflow: hidden;
     height: 33em;
+    width:80em;
 }
 
 .slider-track {
@@ -278,7 +296,7 @@ wh-content p {
 
 .slider-item {
     height: 27em;
-    padding: 40px;
+    padding: 2.6em;
     margin-right: 0.9em;
     border-radius: 10px;
     background: #F5F5F5;
@@ -286,9 +304,9 @@ wh-content p {
 }
 
 .slider-buttons {
-    text-align: center;
-    margin-left: 47%;
-    margin-top: 50px;
+    margin-left: auto;
+        margin-right: 3em;
+        margin-top: 2em;
 }
 
 .btn-prev {
@@ -490,13 +508,6 @@ wh-content p {
     margin: auto;
 }
 
-
-@media(max-width: 376px) {
-    body {
-        font-size: 0.8em;
-    }
-}
-
 .ahead-inner {
     background: #FF5A09;
     border-radius: 15px;
@@ -626,4 +637,80 @@ wh-content p {
 
 .col p {
     padding-bottom: 0.9em;
+}
+@media(max-width:430px){
+    .ideas{
+        font-size:2.5em;
+    }
+    .mono{
+        font-size:1em;
+    }
+    .package{
+        font-size:2em;
+    }
+    .arrow{
+        margin-left:4.5em;
+        top:115%;
+    }
+    .ed{
+        padding-left:5em;
+        padding-right:2em;
+    }
+    .point img{
+        width:250%;
+    }
+    .point{
+        top:-25%;
+    }
+    .package {
+        font-size:1.4em;
+    }
+    .res{
+        font-size:1.2em;
+    }
+    .sour{
+        font-size:1.2em;
+    }
+    .service p{
+        font-size:0.75em;
+    }
+    .rpic{
+        right:-55%;
+        top:-10%;
+    }
+    .azure{
+        right:-5%;
+        top:10%;
+    }
+    .pink{
+        left:-50%;
+        top:-20%;
+    }
+    .hero{
+        height:32em;
+    }
+    .slider-buttons {
+        margin-left: 0.7em;
+        margin-right: 0.5em;
+        margin-top: 2em;
+        }
+        .btn-prev {
+            border: 1px solid rgba(8, 8, 42, 0.25);
+            padding: 0.3em 0.42em;
+            border-radius: 10px;
+            background: #FFF;
+            cursor: pointer;
+        }
+        
+        .btn-next {
+            border: none;
+            padding: 0.3em 0.42em;
+            background: #FF5A09;
+            border-radius: 10px;
+            margin-left: 0.9em;
+            cursor: pointer;
+        }
+}
+@media(max-width:430px){
+
 }
