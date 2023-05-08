@@ -648,7 +648,7 @@ wh-content p {
         right:0;
         width: 60px;
         height: 60px;
-        background: #FF5A09 url(/assets/menu.svg);
+        background: #FF5A09 url(assets/menu.svg);
         background-repeat: no-repeat;
         background-size: 30px;
         background-position: center;
@@ -656,7 +656,7 @@ wh-content p {
         z-index: 1000;
     }
     .menuToggle.active {
-        background: orange url(/assets/cross.svg);
+        background: orange url(assets/cross.svg);
         background-repeat: no-repeat;
         background-size: 30px;
         background-position: center;
