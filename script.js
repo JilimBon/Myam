@@ -1,46 +1,46 @@
-let position = 0;
-        const slidesToShow = 4;
-        const slidesToScroll = 1;
-        const container = document.querySelector('.slider-container');
-        const track = document.querySelector('.slider-track');
-        const btnPrev = document.querySelector('.btn-prev');
-        const btnNext = document.querySelector('.btn-next');
-        const items = document.querySelectorAll('.slider-item');
-        const itemCount = items.length;
-        const itemWidth = container.clientWidth / slidesToShow;
-        const movePosition = slidesToScroll * itemWidth;
+const sliderTrack = document.querySelector('.slider-track');
+const sliderItems = document.querySelectorAll('.slider-item');
+const sliderItemWidth = sliderItems[0].clientWidth;
+const trackWidth = sliderItemWidth * sliderItems.length;
+let trackPositionX = 0;
 
-        items.forEach((item) => {
-            item.style.minWidth = `${itemWidth}px`;
-        });
+// Clone first and last slides for infinite sliding
+sliderTrack.appendChild(sliderItems[0].cloneNode(true));
+sliderTrack.insertBefore(sliderItems[sliderItems.length - 1].cloneNode(true), sliderItems[0]);
 
-        btnNext.addEventListener('click', () => {
-            const itemLeft = itemCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
-            position -= itemLeft >= slidesToScroll ? movePosition : itemLeft * itemWidth;
+// Update track width and position
+sliderTrack.style.width = `${trackWidth}px`;
+sliderTrack.style.transform = `translateX(-${sliderItemWidth}px)`;
+trackPositionX -= sliderItemWidth;
 
-            setPosition();
-            checkBtns();
-        });
+// Handle next button click
+document.querySelector('.btn-next').addEventListener('click', function() {
+trackPositionX -= sliderItemWidth;
+sliderTrack.style.transition = 'transform 0.5s ease';
+sliderTrack.style.transform = `translateX(${trackPositionX}px)`;
+});
 
-        btnPrev.addEventListener('click', () => {
-            const itemLeft = Math.abs(position) / itemWidth;
-            position += itemLeft >= slidesToScroll ? movePosition : itemLeft * itemWidth;
+// Handle prev button click
+document.querySelector('.btn-prev').addEventListener('click', function() {
+trackPositionX += sliderItemWidth;
+sliderTrack.style.transition = 'transform 0.5s ease';
+sliderTrack.style.transform = `translateX(${trackPositionX}px)`;
+});
 
-            setPosition();
-            checkBtns();
-        });
+// Handle transition end to reset position
+sliderTrack.addEventListener('transitionend', function() {
+let currentSlideIndex = Math.abs(trackPositionX / sliderItemWidth);
 
-        const setPosition = () => {
-            track.style.transform = `translateX(${position}px`;
-        }
-
-        const checkBtns = () => {
-            btnPrev.disebled = position === 0;
-            btnNext.disebled = position <= -(itemCount - slidesToShow) * itemWidth;
-        }
-
-        checkBtns();
-
+if (currentSlideIndex === sliderItems.length) {
+trackPositionX = -sliderItemWidth;
+sliderTrack.style.transition = 'none';
+sliderTrack.style.transform = `translateX(${trackPositionX}px)`;
+} else if (currentSlideIndex === 0) {
+trackPositionX = -sliderItemWidth * (sliderItems.length - 2);
+sliderTrack.style.transition = 'none';
+sliderTrack.style.transform = `translateX(${trackPositionX}px)`;
+}
+});
         
         
 
