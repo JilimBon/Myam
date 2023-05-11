@@ -905,7 +905,10 @@ wh-content p {
         }
         .col-inner{
             margin-left:1em;
-            font-size:2em;
+            font-size:0.95em;
             margin-top:1em;
+        }
+     .roz{
+            right:-3%;
         }
 }
