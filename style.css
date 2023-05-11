@@ -648,7 +648,7 @@ wh-content p {
         right:0;
         width: 60px;
         height: 60px;
-        background: #FF5A09 url(/assets/menu.svg);
+        background: #FF5A09 url(assets/menu.svg);
         background-repeat: no-repeat;
         background-size: 30px;
         background-position: center;
@@ -656,7 +656,7 @@ wh-content p {
         z-index: 1000;
     }
     .menuToggle.active {
-        background: orange url(/assets/cross.svg);
+        background: orange url(assets/cross.svg);
         background-repeat: no-repeat;
         background-size: 30px;
         background-position: center;
@@ -760,6 +760,7 @@ wh-content p {
     .ahead-inner{
         width:7em;
         height:14em;
+        margin-left:2.1em;
     }
     .note{
         font-size:1.5em;
@@ -775,7 +776,7 @@ wh-content p {
             border-radius: 10px;
             background: #FFF;
             cursor: pointer;
-            margin-left: -10em;
+            margin-left: -7em;
         }
         
         .btn-next {
@@ -786,7 +787,8 @@ wh-content p {
             cursor: pointer;
         }
         .add-in h1{
-            font-size:2.5em;
+            font-size:2.3em;
+            margin-left:0.5em;
         }
         .slider-container{
             width:27em;
@@ -904,11 +906,61 @@ wh-content p {
             padding-right: 0em;
         }
         .col-inner{
-            margin-left:1em;
-            font-size:0.95em;
+            margin-left:0.85em;
+            font-size:1em;
             margin-top:1em;
         }
-     .roz{
-            right:-3%;
+        .roz{
+            right:5%;
+        }
+        .scroll-container{
+            padding:0.55em 1.35em;
+            margin-left: 1.8em;
+        }
+        #prev-btn {
+            left: 0;
+            border: none;
+            width: 1.25em;
+            height: 1.25em;
+            background: #FF5A09;
+            border-radius: 10px;
+            margin-left: 0em;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        #next-btn {
+            right: 0;
+            border: 1px solid rgba(8, 8, 42, 0.25);
+            width: 1.25em;
+            height: 1.25em;
+            border-radius: 10px;
+            background: #FFF;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .col{
+            margin-left:1.8em;
+        }
+        .lorem{
+            margin-left:1.8em;
+        }
+        .why-inner{
+            margin-left:1.8em;
+        }
+        .slider-images {
+            display: flex;
+            width: 200em;
+            transition: transform 0.5s ease-in-out;
+            overflow-x: hidden;
+            justify-content: space-between;
+        }
+        .scroll-item{
+            width: 13%;
+            height: 100%;
+            overflow: hidden;
+            padding-left:0.8em;
+        }
+        .scroll-item img{
+            width:30em;
         }
 }
