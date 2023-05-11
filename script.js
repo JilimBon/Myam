@@ -87,11 +87,26 @@ const lastClone = images[images.length - 1].cloneNode(true);
 firstClone.alt = "firstClone";
 lastClone.alt = "lastClone";
 slider.appendChild(firstClone);
-slider.insertBefore(lastClone, images[0]);
+slider.insertBefore(lastClone, images[0]);  
+    var menuToggle = document.querySelector('.menuToggle');
+  var navigation = document.querySelector('.navigation');
+  var body = document.querySelector('body');
 
-function toggleMenu() {
-        var menuToggle = document.querySelector('.menuToggle');
-        var navigation = document.querySelector('.navigation');
-        menuToggle.classList.toggle('active');
-        navigation.classList.toggle('active')
-    }
+menuToggle.addEventListener('click',() => {
+  
+
+  menuToggle.classList.toggle('active');
+  navigation.classList.toggle('active');
+
+  const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+  
+  if (body.style.overflow === 'hidden') {
+    // Если скролл заблокирован, то мы должны его разблокировать
+    body.style.overflow = 'auto';
+    body.style.paddingRight = '';
+  } else {
+    // Иначе мы блокируем прокрутку
+    body.style.overflow = 'hidden';
+    body.style.paddingRight = `${scrollBarWidth}px`;
+  }
+})
