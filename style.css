@@ -910,6 +910,7 @@ wh-content p {
             margin-left:0.85em;
             font-size:1em;
             margin-top:1em;
+            width: 100px;
         }
         .roz{
             right:5%;
