@@ -1020,8 +1020,8 @@ wh-content p {
     #prev-btn {
         left: 0;
         border: none;
-        width: 0.95em;
-        height: 0.95em;
+        width: 1.05em;
+        height: 1.05em;
         background: #FF5A09;
         border-radius: 10px;
         margin-left: 0em;
@@ -1032,8 +1032,8 @@ wh-content p {
     #next-btn {
         right: 0;
         border: 1px solid rgba(8, 8, 42, 0.25);
-        width: 0.95em;
-        height: 0.95em;
+        width: 1.05em;
+        height: 1.05em;
         border-radius: 10px;
         background: #FFF;
         cursor: pointer;
