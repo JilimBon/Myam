@@ -50,7 +50,8 @@ const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 
 let counter = 1;
-const size = images[0].clientWidth;
+const size=350;
+// const size = images[0].clientWidth;
 
 slider.style.transform = `translateX(-${size}px)`;
 
