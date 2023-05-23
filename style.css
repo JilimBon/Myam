@@ -972,6 +972,13 @@ wh-content p {
         .trending{
             margin-left:1em;
         }
+    .slider-item {
+            height: 27em;
+            padding: 2.6em;
+            margin-right: 0.03em;
+            border-radius: 10px;
+            background: #F5F5F5;
+        }
         
 }
 @media(max-width:407px){
