@@ -791,6 +791,7 @@ wh-content p {
         }
         .slider-container{
             width:27em;
+            margin-left:1.1em;
         }
         .slider-item h1 {
             font-size: 0.75em;
