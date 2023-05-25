@@ -111,3 +111,47 @@ menuToggle.addEventListener('click',() => {
     body.style.paddingRight = `${scrollBarWidth}px`;
   }
 })
+
+
+const slides = document.querySelectorAll(".slide");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+
+let index = 0;
+
+const setActiveSlide = () => {
+slides.forEach((slide) => {
+slide.classList.remove("active");
+});
+slides[index].classList.add("active");
+};
+
+const scrollToSlide = () => {
+const activeSlide = document.querySelector(".active");
+activeSlide.scrollIntoView({
+behavior: "smooth",
+block: "nearest",
+inline: "start",
+});
+};
+
+prev.addEventListener("click", () => {
+index--;
+if (index < 0) {
+index = slides.length - 1;
+}
+setActiveSlide();
+scrollToSlide();
+});
+
+next.addEventListener("click", () => {
+index++;
+if (index > slides.length - 1) {
+index = 0;
+}
+setActiveSlide();
+scrollToSlide();
+});
+
+setActiveSlide();
+scrollToSlide();
